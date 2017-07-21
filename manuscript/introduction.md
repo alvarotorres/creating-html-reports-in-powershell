@@ -1,8 +1,8 @@
 # Creating HTML Reports in PowerShell
 
-By Don Jones
+Por Don Jones
 
-Cover design by Nathan Vonnahme
+Diseño de portada por Nathan Vonnahme
 
 ---
 
