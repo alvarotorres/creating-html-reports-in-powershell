@@ -113,17 +113,17 @@ th {
 "@
 ```
 
-That's called a Cascading Style Sheet, or CSS. There are a few cool things to pull out from this:
+Eso se llama hoja de estilos en cascada, o CSS. Hay algunas cosas interesantes para sacar destacar:
 
-I've jammed the entire `<style></style>` section into a _here-string_, and stored that in the variable $style. That'll make it easy to refer to this later.
+He colocado toda la sección `<style></ style>` en una cadena [here-string de PowerShell]( https://goo.gl/exzNGQ), y almacenado en la variable $style. Eso hará que sea fácil referirse a esto más adelante.
 
-Notice that I've defined styling for several HTML tags, such as H1, H2, BODY, and TH. Those style definitions list the tag name without a preceding period or hash sign. Inside curly brackets, you define the style elements you care about, such as font size, text alignment, and so on. Tags like H1 and H2 already have predefined styles set by your browser, like their font size; anything you put in the CSS will override the browser defaults.
+Tenga en cuenta que he definido el estilo de varias etiquetas HTML, como H1, H2, BODY y TH. Esas definiciones de estilo listan el nombre de la etiqueta sin un signo anterior de período o hash. Se definen los elementos de estilo que interesan, como el tamaño de la fuente, la alineación del texto, etc. Etiquetas como H1 y H2 ya tienen estilos predefinidos establecidos por su navegador, como su tamaño de fuente. Cualquier cosa que ponga en el CSS reemplazará los valores predeterminados del navegador.
 
-Styles also inherit. The entire body of the HTML page is contained within the `<BODY></BODY>` tags, so whatever you assign to the BODY tag in the CSS will also apply to everything in the page. My body sets a font family and a font color; H1 and H2 tags will use the same font and color.
+Los estilos también heredan. Todo el cuerpo de la página HTML está contenido dentro de las etiquetas `<BODY></ BODY>`, por lo que cualquier cosa que asigne a la etiqueta BODY en CSS también se aplicará a todo lo que contenga la página. Mi cuerpo establece una familia de fuentes y un color de fuente. Las etiquetas H1 y H2 usarán la misma fuente y color.
 
-You'll also see style definitions preceded by a period. Those are called class styles, and I made them up out of thin air. These are sort of reusable style templates that can be applied to any element within the page. The ".paginate" ones are actually used by the JavaScript I use to create dynamic tables; I didn't like the way its Prev/Next buttons looked out of the box, so I modified my CSS to apply different styles.
+También verá las definiciones de estilo precedidas por un punto. Esos se llaman estilos de clase. Son clase de plantillas reutilizables del estilo que se pueden aplicar a cualquier elemento dentro de la página. Los ".paginate" son realmente utilizados por el JavaScript que uso para crear tablas dinámicas. No me gustó la forma en que los botones Prev / Next se veían fuera de la caja, así que modifiqué mi CSS para aplicar estilos diferentes.
 
-Pay close attention to .odd, .even, and .red in the CSS. I totally made those up, and you'll see me use them in a bit.
+Preste mucha atención a .odd, .even, y .red en el CSS. Vera que los utilizo poco a poco.
 
 ```
 function Get-InfoOS {
