@@ -1,8 +1,8 @@
-# Building the HTML
+# Construyendo el HTML
 
-I'm going to abandon the native ConvertTo-HTML cmdlet that I've discussed so far, Instead, I'm going to ask you to use the EnhancedHTML2 module that comes with this ebook. Note that, as of October 2013, this is a new version of the module - it's simpler than the EnhancedHTML module I introduced with the original edition of this book.
+Voy a abandonar el CmdLet nativo de ConvertTo-HTML que he discutido hasta ahora, En lugar de eso, voy a pedirle que utilice el módulo EnhancedHTML2 que viene con este e-Book. Tenga en cuenta que, a partir de octubre de 2013, se trata de una nueva versión del módulo - es más sencillo que el módulo EnhancedHTML introducido con la edición original de este libro.
 
-Let's start with the script that actually uses the module. It's included with this book as EnhancedHTML2-Demo.ps1, so herein I'm going to paste the whole thing, and then insert explanations about what each bit does. Note that I can't control how the code will line-wrap in an e-reader, so it might look wacky.
+Comencemos con el script que utiliza el módulo. Se incluye con este libro como EnhancedHTML2-Demo.ps1, por lo que aquí voy a pegarlo aquí y luego agregare las explicaciones sobre lo que hace cada bit. Tenga en cuenta que no puedo controlar cómo se ve el código en un e-Reader, por lo que es probable que parezca un poco desordenado.
 
 ```
 #requires -module EnhancedHTML2
