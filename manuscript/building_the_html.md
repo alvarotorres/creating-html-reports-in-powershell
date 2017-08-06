@@ -38,7 +38,7 @@ param(
 )
 ```
 
-The above section tells us that this is an "advanced script," meaning it uses PowerShell's cmdlet binding. You can specify one or more computer names to report from, and you must specify a folder path (not a filename) in which to store the final reports.
+La sección anterior nos dice que se trata de un "script avanzado", lo que significa que utiliza el enlace de CmdLet de PowerShell. Puede especificar uno o más nombres de equipo para los que se genera el informe, y debe especificar una ruta de acceso de carpeta (no un nombre de archivo) para almacenar los reportes finales.
 
 ```
 BEGIN {
@@ -47,7 +47,7 @@ BEGIN {
 }
 ```
 
-The BEGIN block can technically be removed. I use this demo to test the module, so it's important that it unload any old version from memory and then re-load the revised version. In production you don't need to do the removal. In fact, PowerShell v3 and later won't require the import, either, if the module is properly located in `\Documents\WindowsPowerShell\Modules\EnhancedHTML2`.
+El bloque BEGIN podría ser eliminado dependiendo de la versión de PowerShell que esté utilizando. Utilizo esta demostración para probar el módulo, así que es importante que descargue cualquier versión antigua de la memoria (si ha cargado el módulo anteriormente) y vuelva a cargar la versión revisada. De hecho, PowerShell v3 y posterior no requerirá la importación si el módulo está correctamente ubicado en `\Documents\WindowsPowerShell\Modules\EnhancedHTML2`.
 
 ```
 PROCESS {
