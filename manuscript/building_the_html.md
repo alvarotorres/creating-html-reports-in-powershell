@@ -213,9 +213,9 @@ function Get-InfoDisk {
 }
 ```
 
-The preceding six functions do nothing but retrieve data from a single computer (notice that their -ComputerName parameter is defined as `[string]`, accepting one value, rather than `[string[]]` which would accept multiples). If you can't figure out how these work... you probably need to step back a bit!
+Las seis funciones anteriores no hacen otra cosa que recuperar datos de una sola computadora (observe que su parámetro -ComputerName se define como `[string]`, aceptando un valor, en lugar de `[string[]]` que aceptaría múltiples). Si no logra entender cómo funciona esto... es probable que tenga que dar un paso atrás!
 
-For formatting purposes in this book, you're seeing me use the back tick character (like after `-ComputerName $ComputerName`). That escapes the carriage return right after it, turning it into a kind of line-continuation character. I point it out because it's easy to miss, being such a tiny character.
+Para propósitos de formato, usted está viendo que se utiliza el carácter (back tick) (como en –ComputerName y $ComputerName). En PowerShell este carácter funciona como una especie de continuación de línea. Lo señalo porque puede ser fácil perderlo de vista.
 
 ```
 foreach ($computer in $computername) {
@@ -229,14 +229,14 @@ foreach ($computer in $computername) {
     }
 ```
 
-The above kicks off the main body of my demo script. It's taking whatever computer names were passed to the script's `-ComputerName` parameter, and going through them one at a time. It's making a call to `Get-WmiObject` as a test - if this fails, I don't want to do anything with the current computer name at all. The remainder of the script only runs if that WMI call succeeds.
+Lo anterior es el inicio de mi script de demostración. Se están tomando los nombres de equipo que se pasaron al parámetro `-ComputerName`, procesándolos uno a la vez. Luego se hace una llamada a `Get-WmiObject` como una prueba - si esto falla, no quiero hacer nada con el nombre del equipo en absoluto. El resto de la secuencia de comandos sólo se ejecuta si esa llamada WMI tiene éxito.
 
 ```
  if ($everything_ok) {
         $filepath = Join-Path -Path $Path -ChildPath "$computer.html"
 ```
 
-Remember that this script's other parameter is `-Path`. I'm using `Join-Path` to combine `$Path` with a filename. `Join-Path` ensures the right number of backslashes, so that if `-Path` is "C:" or "C:\" I'll get a valid file path. The filename will be the current computer's name, followed by the .html filename extension.
+Recuerde que el otro parámetro de este script es `-Path`. Estoy utilizando `Join-Path` para combinar $Path con un nombre de archivo. Join-Path garantiza el número correcto de barras inversas, de modo que si `-Path` es "C:" o "C:" obtendré una ruta de archivo válida. El nombre de archivo será el nombre del equipo actual, seguido de la extensión .html.
 
 ```
         $params = @{'As'='List';
@@ -246,7 +246,7 @@ Remember that this script's other parameter is `-Path`. I'm using `Join-Path` to
 
 ```
 
-Here's my first use of the EnhancedHTML2 module: The ConvertTo-EnhancedHTMLFragment. Notice what I'm doing:
+Aquí está mi primer uso del módulo EnhancedHTML2: Con ConvertTo-EnhancedHTMLFragment. Observe lo que estoy haciendo:
 
 1. I'm using a hashtable to define the command parameters, including both -As List and -PreContent '`<h2>OS</h2>`' as parameters and their values. This specifies a list-style output (vs. a table), preceded by the heading "OS" in the H2 style. Glance back at the CSS, and you'll see I've applied a top border to all `<H2>` element, which will help visually separate my report sections.
 
