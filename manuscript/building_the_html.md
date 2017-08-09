@@ -248,11 +248,11 @@ Recuerde que el otro parámetro de este script es `-Path`. Estoy utilizando `Joi
 
 Aquí está mi primer uso del módulo EnhancedHTML2: Con ConvertTo-EnhancedHTMLFragment. Observe lo que estoy haciendo:
 
-1. I'm using a hashtable to define the command parameters, including both -As List and -PreContent '`<h2>OS</h2>`' as parameters and their values. This specifies a list-style output (vs. a table), preceded by the heading "OS" in the H2 style. Glance back at the CSS, and you'll see I've applied a top border to all `<H2>` element, which will help visually separate my report sections.
+1. Estoy usando un hashtable para definir los parámetros del comando, incluyendo ambos -As List y -PreContent ' `<h2> OS </ h2>`’ como parámetros y sus valores. Esto especifica una salida de estilo de lista (frente a una tabla), precedida por el encabezado "OS" en el estilo H2. Vuelve a mirar el CSS y verás que he aplicado un borde superior a todo el elemento ` <H2>`, lo que ayudará a separar visualmente las secciones de mi informe.
 
-2. I'm running my Get-InfoOS command, passing in the current computer name. The output is being piped to...
+2. Estoy ejecutando mi comando Get-InfoOS, pasando el nombre del equipo actual. La salida se canaliza a...
 
-3. ConvertTo-EnhancedHTMLFragment, which is being given my hashtable of parameters. The result will be a big string of HTML, which will be stored in $html\_os.
+3. ConvertTo-EnhancedHTMLFragment, ConvertTo-EnhancedHTMLFragment, donde se encuentra mi hashtable de parámetros. El resultado será una gran cadena de HTML, que se almacenará en $html\_os.
 
 ```
         $params = @{'As'='List';
@@ -261,7 +261,7 @@ Aquí está mi primer uso del módulo EnhancedHTML2: Con ConvertTo-EnhancedHTMLF
                    ConvertTo-EnhancedHTMLFragment @params 
 ```
 
-That's a very similar example, for the second section of my report.
+Ese es un ejemplo similar, para la segunda sección de mi informe..
 
 ```
         $params = @{'As'='Table';
