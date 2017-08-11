@@ -115,7 +115,7 @@ th {
 
 Eso se llama hoja de estilos en cascada, o CSS. Hay algunas cosas interesantes para sacar destacar:
 
-He colocado toda la sección `<style></ style>` en una cadena [here-string de PowerShell]( https://goo.gl/exzNGQ), y almacenado en la variable $style. Eso hará que sea fácil referirse a esto más adelante.
+He colocado toda la sección `<style></ style>` en una cadena [here-string de PowerShell]( https://goo.gl/exzNGQ), y almacenado en la variable $style. Hará que sea fácil referirse a esto en adelante.
 
 Tenga en cuenta que he definido el estilo de varias etiquetas HTML, como H1, H2, BODY y TH. Esas definiciones de estilo listan el nombre de la etiqueta sin un signo anterior de período o hash. Se definen los elementos de estilo que interesan, como el tamaño de la fuente, la alineación del texto, etc. Etiquetas como H1 y H2 ya tienen estilos predefinidos establecidos por su navegador, como su tamaño de fuente. Cualquier cosa que ponga en el CSS reemplazará los valores predeterminados del navegador.
 
