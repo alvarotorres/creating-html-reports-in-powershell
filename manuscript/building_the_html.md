@@ -375,6 +375,6 @@ El resultado final se canaliza a la ruta de archivo que creé anteriormente. As�
 
 ![image004.png](images/image004.png)
 
-Tengo mis dos secciones contraidas. Observe que la lista de procesos está paginada, con los botones Anterior/Siguiente y observe que mi disco sin 80% está resaltado en rojo. Las tablas muestran 10 entradas por defecto, pero se pueden hacer más grandes, y ofrecen un cuadro de búsqueda incorporado. Se puede hacer clic sobre los encabezados de columna para ordenar.
+Tengo mis últimas dos secciones contraidas. Observe que la lista de procesos está paginada, con los botones Previous/Next y además mi disco sin 80% está resaltado en rojo. Las tablas muestran 10 entradas por defecto, pero se pueden hacer más grandes, y ofrecen un cuadro de búsqueda incorporado. Se puede hacer clic sobre los encabezados de columna para ordenar.
 
 ¡Francamente, creo que se ve extraordinario!
