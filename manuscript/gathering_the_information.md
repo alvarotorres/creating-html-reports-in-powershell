@@ -1,6 +1,6 @@
-# Gathering the Information
+# Recopilación de la información
 
-I'm a big fan of modular programming. Big, big fan. With that in mind, I tend to write functions that gather the information I want to be in my report - and I'll usually do one function per major section of my report. You'll see in a bit how that's beneficial. By writing each function individually, I make it easier to use that same information in other tasks, and I make it easier to debug each one. The trick is to have each function output a single type of object that combines all of the information for that report section. I've created five functions, which I've pasted into a single script file. I'll give you each of those functions one at a time, with a brief commentary for each. Here's the first:
+Soy un gran fan de la programación modular. Gran, gran fan. Con eso en mente, tiendo a escribir funciones que recopilan la información que quiero incluir en mi informe, y normalmente haré una función por sección principal de mi informe. Verá dentro de poco cómo es eso de beneficioso. Escribiendo cada función individualmente, hago más fácil de usar esa misma información en otras tareas, y hago más fácil depurar cada una. El truco consiste en que cada salida de función sea un solo tipo de objeto que combine toda la información de esa sección para el informe. He creado cinco funciones, que he pegado en un solo archivo de script. Le mostraré cada una de esas funciones una a la vez, con un breve comentario. Aquí va la primera:
 
 ```
 function Get-InfoOS {
