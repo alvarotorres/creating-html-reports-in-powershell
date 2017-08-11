@@ -248,7 +248,7 @@ Recuerde que el otro parámetro de este script es `-Path`. Estoy utilizando `Joi
 
 Aquí está mi primer uso del módulo EnhancedHTML2: Con ConvertTo-EnhancedHTMLFragment. Observe lo que estoy haciendo:
 
-1. Estoy usando un hashtable para definir los parámetros del comando, incluyendo ambos -As List y -PreContent '`<H2>OS</H2>`' como parámetros y sus valores. Esto especifica una salida de estilo de lista (frente a una tabla), precedida por el encabezado "OS" en el estilo H2. Vuelve a mirar el CSS y verás que he aplicado un borde superior a todo el elemento `<H2>`, lo que ayudará a separar visualmente las secciones de mi informe.
+1. Estoy usando un hashtable para definir los parámetros del comando, incluyendo ambos -As List y -PreContent '`<H2>OS</H2>`' como parámetros y sus valores. Esto especifica una salida de estilo de lista (frente a una tabla), precedida por el encabezado "OS" en el estilo H2. Vuelva a mirar el CSS y verá que he aplicado un borde superior a todo el elemento `<H2>`, lo que ayudará a separar visualmente las secciones de mi informe.
 
 2. Estoy ejecutando mi comando Get-InfoOS, pasando el nombre del equipo actual. La salida se canaliza a...
 
