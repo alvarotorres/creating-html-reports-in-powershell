@@ -320,9 +320,9 @@ $params = @{'As'='Table';
                                ConvertTo-EnhancedHTMLFragment @params 
 ```
 
-More of the same in the above two examples, with just one new parameter: -MakeHiddenSection. This will cause that section of the report to be collapsed by default, displaying only the -PreContent string. Clicking on the string will expand and collapse the report section.
+Más de lo mismo en los dos ejemplos anteriores, con sólo un nuevo parámetro: -MakeHiddenSection. Esto hará que la sección del informe se colapse de forma predeterminada, mostrando sólo la cadena -PreContent. Al hacer clic en la cadena, se expandirá y contraerá la sección del informe.
 
-Notice way back in my CSS that, for the class .sectionHeader, I set the cursor to a pointer icon, and made the section text color red when the mouse hovers over it. That helps cue the user that the section header can be clicked. The EnhancedHTML2 module always adds the CSS class "sectionheader" to the -PreContent, so by defining ".sectionheader" in your CSS, you can further style the section headers.
+De regreso en mi CSS, observe que para la clase .sectionHeader, establezco el cursor en un icono de puntero, e hice que el color del texto de la sección fuera rojo cuando el ratón pasa sobre él. Esto ayuda a comprender al usuario que se puede hacer clic en el encabezado de la sección. El módulo EnhancedHTML2 siempre agrega la clase CSS "sectionheader" al -PreContent, por lo que al definir ".sectionheader" en su CSS, puede seguir diseñando los encabezados de sección.
 
 ```
         $params = @{'As'='Table';
@@ -335,7 +335,7 @@ Notice way back in my CSS that, for the class .sectionHeader, I set the cursor t
                    ConvertTo-EnhancedHTMLFragment @params
 ```
 
-Nothing new in the above snippet, but now we're ready to assemble the final HTML:
+Nada nuevo en el fragmento anterior, pero ahora estamos listos para generar el HTML final:
 
 ```
         $params = @{'CssStyleSheet'=$style;
@@ -361,7 +361,7 @@ Nothing new in the above snippet, but now we're ready to assemble the final HTML
 }
 ```
 
-The uncommented code and commented code both do the same thing. The first one, uncommented, sets a local file path for the two required JavaScript files. The commented one doesn't specify those parameters, so the final HTML defaults to pulling the JavaScript from Microsoft's Web-based Content Delivery Network (CDN). In both cases:
+El código no comentado y el código comentado hacen lo mismo. El primero, no comentado, establece una ruta de archivo local para los dos archivos JavaScript necesarios. El comentado no especifica esos parámetros, por lo que el código HTML final utilizará el JavaScript desde la Red de distribución de contenido (CDN) basada en la Web de Microsoft. En ambos casos:
 
 - -CssStyleSheet specifies my CSS - I'm feeding it my predefined $style variable. You could also link to an external style sheet (there's a different parameter, -CssUri, for that), but having the style embedded in the HTML makes it more self-contained.
 
