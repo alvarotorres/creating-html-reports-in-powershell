@@ -1,8 +1,7 @@
-# Contacting me
-If you're having problems, want to do something and can't figure out how, found a bug and want to offer a correction, or just have feedback on this guide or the EnhancedHTML module, I'd love to hear from you. 
+# Contactándome
 
-The easiest way is to post in the "General Q&A" forum on [http://powershell.org/wp/forums/](http://powershell.org/wp/forums/). I keep a pretty close eye on that, and I'll respond as soon as I'm able.
+Si tiene problemas, desea hacer algo y no puede averiguar cómo, encontró un error y desea ofrecer una corrección, o simplemente tiene comentarios sobre esta guía o el módulo EnhancedHTML, me encantaría saber de usted.
 
-Do check back from time to time, to make sure you've got the most recent version of this guide and its code.
+La forma más sencilla es publicar en el foro "General Q & A" en http://powershell.org/wp/forums/. Mantengo puesto el ojo aquí que yo voy a responder tan pronto como sea posible.
 
-
+Revise de vez en cuando, para asegurarse que tiene la versión más reciente de esta guía y su código.
