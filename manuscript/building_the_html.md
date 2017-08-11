@@ -363,18 +363,18 @@ Nada nuevo en el fragmento anterior, pero ahora estamos listos para generar el H
 
 El código no comentado y el código comentado hacen lo mismo. El primero, no comentado, establece una ruta de archivo local para los dos archivos JavaScript necesarios. El comentado no especifica esos parámetros, por lo que el código HTML final utilizará el JavaScript desde la Red de distribución de contenido (CDN) basada en la Web de Microsoft. En ambos casos:
 
-- -CssStyleSheet specifies my CSS - I'm feeding it my predefined $style variable. You could also link to an external style sheet (there's a different parameter, -CssUri, for that), but having the style embedded in the HTML makes it more self-contained.
+- -CssStyleSheet especifica mi CSS - estoy alimentando mi variable predefinida $style. También puede vincular a una hoja de estilo externa (hay un parámetro diferente, -CssUri, para eso), pero tener el estilo incrustado en el HTML lo hace más autónomo.
 
-- -Title specifies what will be displayed in the browser title bar or tab.
+- -Title especifica qué se mostrará en la barra de título del navegador o pestaña.
 
-- -PreContent, which I'm defining using the HTML `<H1>` tags, will appear at the tippy-top of the report. There's also a -PostContent if you want to add a footer.
+- -PreContent, que estoy definiendo mediante las etiquetas HTML `<H1>`, aparecerá en la parte superior del informe. También hay un -PostContent si desea agregar un pie de página.
 
-- -HTMLFragments wants an array (hence my use of @() to create an array) of HTML fragments produced by ConvertTo-EnhancedHTMLFragment. I'm feeding it the 6 HTML report sections I created earlier. 
+- -HTMLFragments requiere una matriz (de ahí el uso de @ () para crear una matriz) de fragmentos HTML producidos por ConvertTo-EnhancedHTMLFragment. Así estoy alimentando las 6 secciones del informe HTML que creé anteriormente. 
 
-The final result is piped out to the file path I created earlier. The result:
+El resultado final se canaliza a la ruta de archivo que creé anteriormente. Así se ve el resultado:
 
 ![image004.png](images/image004.png)
 
-I have my two collapsed sections last. Notice that the process list is paginated, with Previous/Next buttons, and notice that my 80%-free disk is highlighted in red. The tables show 10 entries by default, but can be made larger, and they offer a built-in search box. Column headers are clickable for sorting purposes.
+Tengo mis dos secciones colapsadas. Observe que la lista de procesos está paginada, con los botones Anterior/Siguiente y observe que mi disco sin 80% está resaltado en rojo. Las tablas muestran 10 entradas por defecto, pero se pueden hacer más grandes, y ofrecen un cuadro de búsqueda incorporado. Se puede hacer clic sobre los encabezados de columna para ordenar.
 
-Frankly, I think it's pretty terrific!
+¡Francamente, creo que se ve extraordinario!
