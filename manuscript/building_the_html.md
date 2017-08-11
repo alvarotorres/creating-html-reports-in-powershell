@@ -279,27 +279,27 @@ Ese es un ejemplo similar, para la segunda sección de mi informe..
                    ConvertTo-EnhancedHTMLFragment @params
 ```
 
-OK, that's a more complex example. Let's look at the parameters I'm feeding to ConvertTo-EnhancedHTMLFragment:
+OK, ese es un ejemplo más complejo. Echemos un vistazo a los parámetros que estoy pasando a ConvertTo-EnhancedHTMLFragment:
 
-- As is being given Table instead of List, so this output will be in a columnar table layout (a lot like Format-Table would produce, only in HTML).
+- Como se está produciendo una tabla en lugar de una lista, la salida será en un diseño de tabla columnar (algo como lo que produciría Format-Table, pero en HTML).
 
-- For my section header, I've added a diamond symbol using the HTML &diams; entity. I think it looks pretty. That's all.
+- Para mi sección de encabezado, he añadido un símbolo de diamante utilizando la entidad HTML &diams; Creo que se ve bien. Eso es todo.
 
-- Since this will be a table, I get to specify -EvenRowCssClass and -OddRowCssClass. I'm giving them the values "even" and "odd," which are the two classes (.even and .odd) I defined in my CSS. See, this is creating the link between those table rows and my CSS. Any table row "tagged" with the "odd" class will inherit the formatting of ".odd" from my CSS. You don't include the period when specifying the class names with these parameters; only the CSS puts a period in front of the class name.
+- Puesto que esto será una tabla, puedo especificar -EvenRowCssClass y -OddRowCssClass. Le doy los valores "even" y "odd", que son las dos clases (.even y .odd) que definí en mi CSS. De esta forma estoy creando el vínculo entre las filas de la tabla y mi CSS. Cualquier fila de la tabla "etiquetada" con la clase "odd" heredará el formato de ".odd" de mi CSS. No se debe incluir el punto al especificar los nombres de clase con estos parámetros. Sólo en el CSS se coloca el punto delante del nombre de la clase.
 
-- `-MakeTableDynamic` is being set to $True, which will apply the JavaScript necessary to turn this into a sortable, paginated table. This will require the final HTML to link to the necessary JavaScript file, which I'll cover when we get there.
+- `-MakeTableDynamic` se establece en $True, para que se aplique el JavaScript necesario y convertir la salida en una tabla que se pueda ordenar y paginar. Esto requerirá que el HTML final se vincule al archivo JavaScript necesario, pero cubriremos este punto cuando lleguemos allí.
 
-- `-TableCssClass` is optional, but I'm using it to assign the class "grid." Again, if you peek back at the CSS, you'll see that I defined a style for ".grid," so this table will inherit those style instructions.
+- `-TableCssClass` es opcional, pero lo estoy usando para asignar la clase "grid". Una vez más, si observa el CSS, podrá observar que definí un estilo para ".grid", por lo que esta tabla heredará esas instrucciones de estilo.
 
-- Last up is the `-Properties` parameter. This works a lot like the `-Properties` parameters of `Select-Object` and `Format-Table`. The parameter accepts a comma-separated list of properties. The first, Drive, is already being produced by `Get-InfoDisk`. The next three are special: they're hashtables, creating custom columns just like Format-Table would do. Within the hashtable, you can use the following keys:
+- El último es el parámetro `-Properties`. Funciona muy parecido a los parámetros `-Properties` de `Select-Object` y `Format-Table`. El parámetro acepta una lista de propiedades separada por comas. El primero, Drive, ya está siendo producido por `Get-InfoDisk`. Los siguientes tres son especiales: son hashtables, creando columnas personalizadas como loa haría Format-Tabl. Dentro del hashtable, usted puede utilizar las siguientes claves:
 
-  - n (or name, or l, or label) specifies the column header - I'm using "Size(GB)," "Free(GB)", and "Free(%)" as column headers.
+  - n (o name, o l, o label) especifica el encabezado de columna. Estoy usando "Size(GB)," "Free(GB)", y "Free(%)" como encabezados de columna.
   
-  - e (or expression) is a script block, which defines what the table cell will contain. Within it, you can use $\_ to refer to the piped-in object. In this example, the piped-in object comes from Get-InfoDisk, so I'm referring to the object's Size, Free, and FreePct properties. 
+  - e (o expression) es un bloque de secuencia de comandos, que define lo que contendrá la celda de la tabla. Dentro de ella, puede utilizar $\_ para referirse al objeto de entrada. En este ejemplo, el objeto canalizado proviene de `Get-InfoDisk`, por lo que me refiero a las propiedades Size, Free y FreePct del objeto. 
   
-  - css (or cssClass) is also a script block. While the rest of the keys work the same as they do with Select-Object or Format-Table, css (or cssClass) is unique to ConvertTo-EnhancedHTMLFragment. It accepts a script block, which is expected to produce either a string, or nothing at all. In this case, I'm checking to see if the piped-in object's FreePct property is less than 80 or not. If it is, I output the string "red." That string will be added as a CSS class of the table cell. Remember, back in my CSS I defined the class ".red" and this is where I'm attaching that class to table cells.
+  - css (o cssClass) es también un bloque de secuencia de comandos. Mientras que el resto de las claves funcionan igual que lo hacen con Select-Object o Format-Table, css (o cssClass) es exclusivo de ConvertTo-EnhancedHTMLFragment. Acepta un bloque de secuencia de comandos, que se espera que produzca una cadena, o nada. En este caso, estoy comprobando para ver si la propiedad FreePct del objeto en la canalización es menor que 80 o no. Si es así, la salida será la cadena "red". Esta cadena se agregará como una clase CSS de la celda en la tabla. Recuerde que en mi CSS definí la clase ".red" y aquí es donde adjunto esa clase a las celdas de la tabla.
   
-  - As a note, I realize it's silly to color it red when the disk free percent is less than 80%. It's just a good example to play with. You could easily have a more complex formula, like _if ($\_.FreePct -lt 20) { 'red' } elseif ($\_.FreePct -lt 40) { 'yellow' } else { 'green' }_ - that would assume you'd defined the classes ".red" and ".yellow" and ".green" in your CSS.
+  - Como una nota aparte, me doy cuenta de que es tonto establecer un color rojo cuando el porcentaje libre de disco es inferior al 80%. Se trata solo de un ejemplo para jugar. Podría fácilmente tener una fórmula más compleja, como _if ($\_.FreePct -lt 20) { 'red' } elseif ($\_.FreePct -lt 40) { 'yellow' } else { 'green' }_ y entonces habría definido las clases ".red", ".yellow" y ".green" en el CSS.
 
 ```
 $params = @{'As'='Table';
