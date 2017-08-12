@@ -30,7 +30,7 @@ Get-WmiObject -class Win32_Service | ConvertTo-HTML | Out-File report.html -appe
 
 "Aaarrrggh," dice mi colon cada vez que veo eso. Básicamente, está diciendo a PowerShell que cree tres documentos HTML completos y los coloque en un solo archivo. Mientras que algunos navegadores (Internet Explorer, por ejemplo) entenderán eso e intentarán mostrar algo, es simplemente incorrecto hacer esto. Una vez que empiece generar esta clase de informes, descubrirá rápidamente que este enfoque es doloroso. No es culpa de PowerShell; Simplemente no está siguiendo las reglas. ¡Por eso esta guía!
 
-You'll notice that the HTML consists of a lot of other tags, too: `<TABLE>, <TD>, <HEAD>`, and so on. Most of these are _paired_, meaning they come in an opening tag like `<TD>` and a closing tag like `</TD>`. The `<TD>` tag represents a table cell, and everything between those tags is considered the contents of that cell.
+Se dará cuenta que el HTML consiste en muchas otras etiquetas, como: `<TABLE>, <TD>, <HEAD>`, y otras más. La mayoría de estas forman parejas, lo que significa que vienen en una etiqueta de apertura como `<TD>` y una etiqueta de cierre como `</TD>`. La etiqueta `<TD>` representa una celda de tabla, y todo entre esas etiquetas se considera el contenido de esa celda.
 
 The `<HEAD>` section is important. What's inside there isn't normally visible in the browser; instead, the browser focuses on what's in the `<BODY>` section. The `<HEAD>` section provides additional meta-data, like what the title of the page will be (as displayed in the browser's window title bar or tab, not in the page itself), any style sheets or scripts that are attached to the page, and so on. We're going to do some pretty awesome stuff with the `<HEAD>` section, trust me.
 
