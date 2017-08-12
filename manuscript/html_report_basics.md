@@ -1,8 +1,8 @@
-# HTML Report Basics
+# Bases del informe HTML
 
-First, understand that PowerShell isn't limited to creating reports in HTML. But I like HTML because it's flexible, can be easily e-mailed, and can be more easily made to look pretty than a plain-text report. But before you dive in, you do need to know a bit about how HTML works.
+En primer lugar, entender que PowerShell no se limita a crear informes en HTML. Pero me gusta el HTML porque es flexible, puede ser enviado fácilmente a través de correo electrónico, y se ve mucho mejor que un simple informe de texto sin ningún formato. Pero antes de sumergirnos en esto, necesitamos aclarar un poco cómo funciona el HTML.
 
-An HTML page is just a plain text file, looking something like this:
+Una página HTML es sólo un archivo de texto sin formato, con algo parecido a esto:
 
 ```html
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -18,7 +18,7 @@ An HTML page is just a plain text file, looking something like this:
 </body></html>
 ```
 
-When read by a browser, this file is rendered into the display you see within the browser's window. The same applies to e-mail clients capable of displaying HTML content. While you, as a person, can obviously put anything you want into the file, if you want the output to look right you need to follow the rules that browsers expect.
+Cuando se interpreta por un navegador, este archivo se representa en la pantalla que aparece en la ventana del navegador. Lo mismo se aplica a los clientes de correo electrónico capaces de mostrar contenido HTML. Mientras que usted, como persona, puede poner obviamente cualquier cosa en el archivo, necesita seguir las reglas que los browsers esperan para obtener la salida deseada.
 
 One of those rules is that each file should contain one, and only one, HTML document. That's all of the content between the `<HTML>` tag and the `</HTML>` tag (tag names aren't case-sensitive, and it's common to see them in all-lowercase as in the example above). I mention this because one of the most common things I'll see folks do in PowerShell looks something like this:
 
