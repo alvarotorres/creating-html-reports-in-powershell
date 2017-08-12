@@ -20,7 +20,7 @@ Una página HTML es sólo un archivo de texto sin formato, con algo parecido a e
 
 Cuando se interpreta por un navegador, este archivo se representa en la pantalla que aparece en la ventana del navegador. Lo mismo se aplica a los clientes de correo electrónico capaces de mostrar contenido HTML. Mientras que usted, como persona, puede poner obviamente cualquier cosa en el archivo, necesita seguir las reglas que los browsers esperan para obtener la salida deseada.
 
-One of those rules is that each file should contain one, and only one, HTML document. That's all of the content between the `<HTML>` tag and the `</HTML>` tag (tag names aren't case-sensitive, and it's common to see them in all-lowercase as in the example above). I mention this because one of the most common things I'll see folks do in PowerShell looks something like this:
+Una de esas reglas es que cada archivo debe contener uno y un solo documento HTML. Es todo el contenido entre la etiqueta `<HTML>` y la etiqueta `</HTML>` (los nombres de las etiquetas no distinguen entre mayúsculas y minúsculas, y es común verlas en minúsculas como en el ejemplo anterior). Menciono esto porque una de las cosas más comunes que veré a la gente hacer con PowerShell se parecerá a esto:
 
 ```
 Get-WmiObject -class Win32_OperatingSystem | ConvertTo-HTML | Out-File report.html
