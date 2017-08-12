@@ -16,7 +16,8 @@ function Get-InfoOS {
 }
 ```
 
-This is a straightforward function, and the main reason I bothered to even make it a function - as opposed to just using Get-WmiObject directly - is that I want different property names, like "OSVersion" instead of just "Version." That said, I tend to follow this exact same programming pattern for all info-retrieval functions, just to keep them consistent. 
+Esta es una función sencilla, y la principal razón por la que me molesté en hacer que sea una función - en lugar de simplemente usar Get-WmiObject directamente - es que quiero nombres de propiedad diferentes, como "OSVersion" en lugar de sólo "Version". Dicho esto, tiendo a seguir exactamente este mismo patrón de programación para todas las funciones de recuperación de información, sólo para mantenerlas consistentes.
+
 
 ```
 function Get-InfoCompSystem {
@@ -34,7 +35,7 @@ function Get-InfoCompSystem {
 }
 ```
 
-Very similar to the last one. You'll notice here that I'm using the -f formatting operator with the RAM property, so that I get a value in gigabytes with 2 decimal places. The native value is in bytes, which isn't useful for me.
+Muy similar a la anterior. Notará aquí que estoy usando el operador de formato -f con la propiedad RAM, de modo que obtengo un valor en gigabytes con 2 decimales. El valor nativo está en bytes, lo que no es útil para mí.
 
 ```
 function Get-InfoBadService {
@@ -70,7 +71,7 @@ function Get-InfoProc {
 }
 ```
 
-Very similar to the function for services. You can probably start to see how using this same structure makes a certain amount of copy-and-paste pretty effective when I create a new function.
+Muy similar a la función de servicios. Probablemente pueda empezar a notar cómo usar esta misma estructura hace que una cierta cantidad “copiar y pegar” se vuelva efectiva cuando creo una nueva función.
 
 ```
 function Get-InfoNIC {
@@ -90,6 +91,6 @@ function Get-InfoNIC {
 } 
 ```
 
-The main thing of note here is how I've converted the speed property, which is natively in bytes, to megabytes. Because I don't care about decimal places here (I want a whole number), casting the value as an integer, by using the -as operator, is easier for me than the -f formatting operator. Also, it gives me a chance to show you this technique!
+Lo principal para notar  aquí es cómo he convertido la propiedad speed, que esta nativamente en bytes, a megabytes. Debido a que no me interesan los decimales aquí (quiero un número entero), eligo utilizar  el valor como un entero, utilizando el operador -as, que es más sencillo para mí que el operador de formato -f. ¡Además, me da la oportunidad de mostrar esta técnica!
 
-Note that, for the purposes of this book, I'm going to be putting these functions into the same script file as the rest of my code, which actually generates the HTML. I don't normally do that. Normally, info-retrieval functions go into a script module, and I then write my HTML-generation script to load that module. Having the functions in a module makes them easier to use elsewhere, if I want to. I'm skipping the module this time just to keep things simpler for this demonstration. If you want to learn more about script modules, pick up Learn PowerShell Toolmaking in a Month of Lunches or PowerShell in Depth, both of which are available from Manning.com.
+Tenga en cuenta que, a los efectos de este libro, voy a poner estas funciones en el mismo archivo de script que el resto de mi código, lo que en realidad genera el código HTML. Normalmente no hago eso. Normalmente, las funciones de recuperación de información van a un módulo de script, y entonces escribo mi script de generación HTML para cargar ese módulo. Tener las funciones en un módulo hace que sean más fáciles de usar en otros lugares, si quiero. Estoy omitiendo el módulo esta vez sólo para mantener las cosas más simples en esta demostración. Si desea obtener más información sobre los módulos de script, debería dar una mirada a Learn PowerShell Toolmaking in a Month of Lunches o  PowerShell in Depth, los cuales están disponibles en Manning.com.
