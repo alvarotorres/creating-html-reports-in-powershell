@@ -28,7 +28,7 @@ Get-WmiObject -class Win32_BIOS | ConvertTo-HTML | Out-File report.html -append
 Get-WmiObject -class Win32_Service | ConvertTo-HTML | Out-File report.html -append 
 ```
 
-"Aaarrrggh," says my colon every time I see that. You're basically telling PowerShell to create three complete HTML documents and jam them into a single file. While some browsers (Internet Explorer, notable) will figure that out and display something, it's just wrong. Once you start getting fancy with reports, you'll figure out pretty quickly that this approach is painful. It isn't PowerShell's fault; you're just not following the rules. Hence this guide!
+"Aaarrrggh," dice mi colon cada vez que veo eso. Básicamente, está diciendo a PowerShell que cree tres documentos HTML completos y los coloque en un solo archivo. Mientras que algunos navegadores (Internet Explorer, por ejemplo) entenderán eso e intentarán mostrar algo, es simplemente incorrecto hacer esto. Una vez que empiece generar esta clase de informes, descubrirá rápidamente que este enfoque es doloroso. No es culpa de PowerShell; Simplemente no está siguiendo las reglas. ¡Por eso esta guía!
 
 You'll notice that the HTML consists of a lot of other tags, too: `<TABLE>, <TD>, <HEAD>`, and so on. Most of these are _paired_, meaning they come in an opening tag like `<TD>` and a closing tag like `</TD>`. The `<TD>` tag represents a table cell, and everything between those tags is considered the contents of that cell.
 
