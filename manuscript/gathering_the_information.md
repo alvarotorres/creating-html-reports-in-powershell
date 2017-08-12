@@ -54,7 +54,7 @@ function Get-InfoBadService {
 }
 ```
 
-Here, I've had to recognize that I'll be getting back more than one object from WMI, so I have to enumerate through them using a ForEach construct. Again, I'm primarily just renaming properties. I absolutely could have done that with a Select-Object command, but I like to keep the overall function structure similar to my other functions. Just a personal preference that helps me include fewer bugs, since I'm used to doing things this way.
+Aquí, he tenido que reconocer que voy a estar recuperando más de un objeto de WMI, así que tengo que enumerar a través de ellos usando una construcción ForEach. Una vez más, estoy principalmente renombrando propiedades. Podría haber hecho eso con un comando Select-Object, pero me gusta mantener la estructura de funciones general similar a mis otras funciones. Es sólo una preferencia personal que me ayuda a incluir menos errores, ya que estoy acostumbrado a hacer las cosas de esta manera.
 
 ```
 function Get-InfoProc {
