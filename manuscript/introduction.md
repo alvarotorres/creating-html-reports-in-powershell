@@ -6,7 +6,7 @@ Diseño de portada por Nathan Vonnahme
 
 ---
 
-Learn to properly use ConvertTo-HTML to produce multi-section, well-formed HTML reports – but then go further with a custom EnhancedHTML module! Produce beautiful, color-coded, dynamic, multi-section reports easily and quickly. By Don Jones.
+Aprenda a utilizar correctamente ConvertTo-HTML para producir informes HTML de varias secciones y bien formados, pero luego vaya más allá con un módulo EnhancedHTML personalizado. Produaca informes hermosos, codificados por colores, dinámicos y con multi-secciones de forma fácil y rápida. Escrito por Don Jones.
 
 ---
 
