@@ -1,4 +1,4 @@
-# Summary
+# Resumen
 
 * [Leame](README.md)
 * [Introducción](manuscript/introduction.md)
