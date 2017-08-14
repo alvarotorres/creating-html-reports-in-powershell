@@ -12,7 +12,7 @@ Aprenda a utilizar correctamente ConvertTo-HTML para producir informes HTML de v
 
 Esta guía se publica bajo la licencia Creative Commons Attribution-NoDerivs 3.0 Unported. Los autores le animan a redistribuir este archivo lo más ampliamente posible, pero le solicitan que no modifique el documento original.
 
-**Descargar el código**  El módulo EnhancedHTML2 mencionado en este libro puede encontrarse en [https://www.powershellgallery.com/packages/EnhancedHTML2/](PowerShell Gallery). Esa página incluye instrucciones de descarga. PowerShellGet es necesario, y se puede obtener de PowerShellGallery.com
+**Descargar el código**  El módulo EnhancedHTML2 mencionado en este libro puede encontrarse en [PowerShell Gallery](https://www.powershellgallery.com/packages/EnhancedHTML2/). Esa página incluye instrucciones de descarga. PowerShellGet es necesario, y se puede obtener de PowerShellGallery.com
 
 **¿Ha sido útil este libro?** El (los) autor (es) le pide (n) que haga una donación deducible de impuestos (en los EE.UU., consulte sus leyes si vive en otro lugar) de cualquier cantidad a [The DevOps Collective](https://devopscollective.org/donate/) para apoyar su trabajo.
 
