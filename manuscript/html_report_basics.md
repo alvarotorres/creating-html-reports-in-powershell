@@ -36,20 +36,21 @@ La sección `<HEAD>` es importante. Lo que hay dentro no es normalmente visible 
 
 También notará que este HTML es bastante "limpio", en contraposición, digamos, a la salida HTML de Microsoft Word. Este HTML no contiene información visual incrustada en él, como colores o fuentes. Eso es bueno, porque sigue las buenas prácticas de HTML de separar la información de formato de la estructura del documento. Será decepcionante al principio, porque sus páginas HTML parecerán algo aburridas. Pero vamos a mejorar eso, también.
 
-In order to help the narrative in this book stay focused, I'm going to start with a single example. In that example, we're going to retrieve multiple bits of information about a remote computer, and format it all into a pretty, dynamic HTML report. Hopefully, you'll be able to focus on the techniques I'm showing you, and adapt those to your own specific needs.
+Para ayudar a que la narrativa de este libro permanezca enfocada, voy a comenzar con un solo ejemplo. En ese ejemplo, vamos a recuperar varios bits de información acerca de una computadora remota y formatear todo en un bonito y dinámico informe HTML. Con suerte, podrá concentrarse en las técnicas que estoy mostrando, y adaptarlas a sus propias necesidades.
 
-In my example, I want the report to have five sections, each with the following information:
+En mi ejemplo, quiero que el informe tenga cinco secciones, cada una con la siguiente información:
 
-- Computer Information
+- Información de la computadora
 
-- The computer's operating system version, build number, and service pack version.
+- Versión del sistema operativo del equipo, número de compilación y versión del Service Pack.
 
-- Hardware info: the amount of installed RAM and number of processes, along with the manufacturer and model. 
+- Información de hardware: la cantidad de RAM instalada y el número de cores, junto con el fabricante y el modelo.
 
-- An list of all processes running on the machine.
+- Una lista de todos los procesos que se ejecutan en la máquina.
 
-- A list of all services which are set to start automatically, but which aren't running.
+- Una lista de todos los servicios que están configurados para iniciarse automáticamente, pero que no se están ejecutando.
 
-- Information about all physical network adapters in the computer. Not IP addresses, necessarily - hardware information like MAC address.
+- Información sobre todos los adaptadores de red físicos en el equipo. No direcciones IP, necesariamente - información de hardware como la dirección MAC
 
-I realize this isn't a universally-interesting set of information, but these sections will allow be to demonstrate some specific techniques. Again, I'm hoping that you can adapt these to your precise needs.
+
+Soy consciente que esta información no es un conjunto universalmente interesante, pero estas secciones permitirán demostrar algunas técnicas específicas. Una vez más, espero que usted pueda adaptar esto a sus necesidades precisas.
